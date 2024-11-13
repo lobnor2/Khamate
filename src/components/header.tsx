@@ -1,5 +1,5 @@
 import { useTheme } from "@/context/theme-provider";
-import React from "react";
+import { Moon, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -22,9 +22,15 @@ const Header = () => {
           {/* theme toggle */}
           <div
             onClick={() => setTheme(isDark ? "light" : "dark")}
-            className="cursor-pointer"
+            className={`cursor-pointer flex items-center transition-transform duration-500
+                ${isDark ? "rotate-180" : "rotate-0"}
+                `}
           >
-            toggle
+            {isDark ? (
+              <Sun className="text-yellow-300 h-6 w-6 " />
+            ) : (
+              <Moon className="text-blue-500 h-6 w-6" />
+            )}
           </div>
         </div>
       </div>

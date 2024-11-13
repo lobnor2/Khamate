@@ -5,7 +5,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   return (
     <div className="border border-red-500">
       <Header />
-      <main className="border border-white min-h-screen container mx-auto px-4 py-8">
+      <main className="border border-blue-500 min-h-screen container mx-auto py-8">
         {children}
       </main>
       <footer className="border-t backdrop-blur py-7">
